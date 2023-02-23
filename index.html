@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="start-page">
+            <div class="name-page">
+                <label for="your-name">Enter Your Name Please</label>
+                <input type="text" id="the-name">
+                <div class="btn">
+                    Start Game
+                </div>
+                <div class="warrning">
+                    Please Type your name first..
+                </div>
+            </div>
+        </div>
+        <div class="end-page">
+            <div class="game-over">
+                <div class="time-is-up">Game Over</div>
+                <div class="restart" id="restart"><i class="fa fa-facebook"></i>Restart</div>
+            </div>
+        </div>
+        <div class="game-info">
+            <div class="name">
+                Name: <span class="your-name"></span>
+            </div>
+            <div class="count-down">01:29</div>
+            <div class="tries">
+                Wrong Tries: <span>0</span>
+            </div>
+        </div>
+        <div class="congrats-container">
+            <div id="congrats">
+                <h3 class="congrats-name">Congratulations <span id="winner-name"> Mohamad</span> </h3>
+                <button class="restart" onclick="restartGame()" id="restartGame">Restart</button>
+            </div>
+        </div>
+        <div class="game-content">
+            <div class="flip-card" data-animals="squirrel" data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="squirrel"  data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card"  data-animals="cow"  data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="cow"  data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="lion"  data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="lion"  data-number="test">
+                <div class="face front">
+                    
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="deer">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="deer">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="bee">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="bee">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="owl">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="owl">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="elephant">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="elephant">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="ziraf">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="ziraf">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="rabbit">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/9.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="rabbit">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/9.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="python">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/10.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="python">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/10.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="react">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/11.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="react">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/11.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flip-card" data-animals="word">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/12.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" data-animals="word">
+                <div class="face front">
+            
+                </div>
+                <div class="face back">
+                    <div class="img">
+                        <img src="images/12.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="correct" src="audio/audio.mp3"></audio>
+        <audio id="wrong" src="audio/wrong.mp3"></audio>
+    </div>
+    
+    <script src="js/memory.js"></script>
+</body>
+</html>
